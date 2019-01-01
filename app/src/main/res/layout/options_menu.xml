@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scrollbars="none">-->
+
+
+    <RelativeLayout
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+
+        <!--Home-->
+        <LinearLayout
+            android:id="@+id/homee"
+            style="@style/per_menu_linear"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/home"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/home"/>
+        </LinearLayout>
+        <!--My profile-->
+        <LinearLayout
+            android:id="@+id/my_profile"
+            style="@style/per_menu_linear"
+            android:layout_below="@id/homee">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/profile"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/my_profile" />
+        </LinearLayout>
+        <!--Events-->
+        <LinearLayout
+            android:id="@+id/events"
+            style="@style/per_menu_linear"
+            android:layout_below="@id/my_profile">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/event"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/events" />
+        </LinearLayout>
+        <!--Favorites-->
+        <LinearLayout
+            android:id="@+id/favorite"
+            style="@style/per_menu_linear"
+            android:layout_below="@id/events">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/favorite"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/favorite" />
+        </LinearLayout>
+        <!--Inbox-->
+        <RelativeLayout
+            android:id="@+id/inbox"
+            style="@style/per_menu_linear"
+            android:layout_below="@id/favorite">
+
+            <ImageView
+                android:id="@+id/inbox_icon"
+                style="@style/menu_icons"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mail"/>
+
+            <TextView
+                style="@style/menu_text"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/inbox_icon"
+                android:text="@string/inbox"/>
+
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/yellow_num"/>
+        </RelativeLayout>
+
+        <!--Line-->
+       <View
+           android:id="@+id/j_view"
+           android:layout_width="match_parent"
+           android:layout_height="7dp"
+           android:layout_below="@id/inbox"
+           android:layout_marginBottom="5dp"
+           android:layout_marginTop="16dp"
+           android:background="@color/menu_background"/>
+
+        <!--Contact us-->
+        <LinearLayout
+            android:id="@+id/contact_us"
+            style="@style/menu_two"
+            android:layout_below="@id/j_view">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/call"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/contact_us" />
+        </LinearLayout>
+        <!--Feedback-->
+        <LinearLayout
+            android:id="@+id/feed_back"
+            style="@style/menu_two"
+            android:layout_below="@id/contact_us">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/document"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/feed_back" />
+        </LinearLayout>
+        <!--Setting-->
+        <LinearLayout
+            android:id="@+id/setting"
+            style="@style/menu_two"
+            android:layout_below="@id/feed_back">
+
+            <ImageView
+                style="@style/menu_icons"
+                android:src="@drawable/settings"
+                />
+
+            <TextView
+                style="@style/menu_text"
+                android:text="@string/setting" />
+        </LinearLayout>
+
+        <!--Dashboard-->
+       <TextView
+           android:id="@+id/j_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/setting"
+           android:layout_marginBottom="7dp"
+           android:layout_marginTop="8dp"
+           android:background="@color/menu_background"
+           android:paddingBottom="8dp"
+           android:paddingLeft="20sp"
+           android:paddingTop="8dp"
+           android:text="Dashboard"
+           android:textAllCaps="true"
+           android:textColor="#ffffff"
+           android:textSize="15sp"/>
+
+         <!--school choices-->
+        <LinearLayout
+            android:id="@+id/j_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/j_text"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+            <!--My school-->
+            <LinearLayout
+                android:id="@+id/my_school"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:background="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    style="@style/dash_icon"
+                    android:layout_weight="1"
+                    android:src="@drawable/my_school"/>
+
+                <TextView
+                    style="@style/dash_text"
+                    android:layout_weight="1"
+                    android:text="@string/my_schools"/>
+
+            </LinearLayout>
+            <!--Vertical line-->
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/menu_background"/>
+            <!--Add school-->
+            <LinearLayout
+                android:id="@+id/add_school"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    style="@style/dash_icon"
+                    android:layout_weight="1"
+                    android:src="@drawable/pencil"/>
+
+                <TextView
+                    style="@style/dash_text"
+                    android:layout_weight="1"
+                    android:text="@string/add_school"/>
+
+            </LinearLayout>
+            <!--Vertical line-->
+            <View
+                android:layout_width="0.3dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/menu_background"/>
+            <!--Use app-->
+            <LinearLayout
+                android:id="@+id/use_app"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:background="?android:attr/selectableItemBackground"
+                >
+
+                <ImageView
+                    style="@style/dash_icon"
+                    android:src="@drawable/use_app" />
+
+                <TextView
+                    style="@style/dash_text"
+                    android:text="@string/use_app" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Log out-->
+        <RelativeLayout
+            android:id="@+id/log_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/j_lin"
+            android:background="@color/menu_background">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="11dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_toLeftOf="@id/log_text"
+                android:src="@drawable/logout"/>
+
+            <TextView
+                android:id="@+id/log_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Log out"
+                android:textColor="#ffffff"
+                android:textSize="13sp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <!--</ScrollView>-->
+
+</merge>
+
